@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Area de Login></title>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/> 
+		<link rel='stylesheet' href='/stylesheets/style.css' />	
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+  		<nav>
+		    <div class="nav-wrapper">
+		      <ul id="nav-mobile" class="left hide-on-med-and-down">
+		        <li><a href="/usuario/cadastrar">Cadastre-se</a></li>
+		        <li><a href="/">Pagina Inicial</a></li>		    	
+		      </ul>
+		    </div>
+		</nav>
+  		<div class='row'>  			
+			<div class='col s6 offset-s3'>
+				<h3 class='center-align'>Area de Login</h3>
+			</div>
+		</div>
+		
+		<% if(resposta.length > 0) { %>
+		<div class='row'>  			
+			<div class='col s6 offset-s3'>
+				<h3 class='center-align red-text'>Usuario ou senha Incorretos</h3>
+			</div>
+		</div>
+		<% } %>
+
+		<div class='row'>   				
+			<form class='col s12 m12 l6 offset-l3' action="/usuario/fazer-login" method="POST" onsubmit='return validaLogin()'>
+				<div>
+					<label for="usuario">Usuario: </label>
+					<input type="text" name="usuario" id="usuario" /> 
+				</div>
+				<div>
+					<label for="senha">Senha:  </label>
+					<input type="password" name="senha" id="senha" /> 
+				</div>
+					<input type="submit" class="btn btn-success" value="Logar" /> 	
+			</form>	
+			</div>
+			<div class='row'>
+				<div class='col s12 m12 l6 offset-l3'>
+					<button name='cadastrar' class='btn wave-effects' onclick='cadastrar()'>Cadastre-se</button>
+				</div> 	
+					
+			</div>
+		
+  </body>  
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/validacao.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
+
+</html>

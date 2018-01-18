@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Cadastro de Aulas</title>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/> 
+		<link rel='stylesheet' href='../css/style.css' />	
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+		<nav>
+		    <div class="nav-wrapper">
+		      	<ul id="nav-mobile" class="left hide-on-med-and-down">
+		        	<li><a href="/">Pagina Inicial</a></li>
+		        	<li><a href="/usuario/cadastrar">Cadastre-se</a></li>		        	
+	      		</ul>
+	    	</div>
+		</nav>
+  		<div class='row'>  			
+			<div class='col s6 offset-s3'>
+				<h3 class='center-align'>Cadastro de aulas</h3>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col s12 m12 l6 offset-l3'>				
+				<form action="/adm/aulaAdicionada" method="POST" onsubmit='return validaCurso()'>
+					<div>
+						<label for="nome">Nome da Aula: </label>
+						<input type="text" name="nome" id="nome" /> 
+					</div>					
+					<div>
+						<label for="link">Link da aula:  </label>
+						<input type="text" name="link" id="link" /> 
+					</div>						
+						<input type="submit" class="btn btn-success" value="Cadastrar" /> 	
+				</form>		
+			</div>   			
+		</div>
+  </body>  
+
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/validacao.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
+
+</html>

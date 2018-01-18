@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Página Inicial></title>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/> 
+		<link rel='stylesheet' href='/stylesheets/style.css' />	
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+  		  <nav>
+		    <div class="nav-wrapper">
+		      <ul id="nav-mobile" class="left hide-on-med-and-down">
+		        <li><a href="/usuario/cadastrar">Cadastre-se</a></li>
+		        <li><a href="/usuario/login">Area de Login</a></li>
+		    	<%if(areaAdm.length > 0) { %>
+	        	<li><a href="/adm/insereAula">Area administrativa</a></li>
+	        	<% } %>
+		      </ul>
+		    </div>
+		  </nav>
+        
+  		<div class='row'>  			
+			<div class='col s6 offset-s3'>
+				<h3>Pagina de cursos</h3>
+			</div>
+		</div>
+		<div class='row'>  			
+			<div class='col s6 offset-s3'>
+				<table class='striped'>
+				<% for(var i = 0; i < resposta.length; i++) { %>
+				<tr>
+					<td>
+						<h6>Nome do curso: <%= resposta[i].nome %></h6>
+						<a href=<%= resposta[i].link %>>Link da videoaula</a>
+					</td>
+				</tr>
+				<% } %>				
+				</table>
+			</div>
+		</div>
+		
+  </body>  
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/validacao.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
+
+</html>
